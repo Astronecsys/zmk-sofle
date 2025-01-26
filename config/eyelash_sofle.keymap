@@ -47,6 +47,22 @@
         tap-ms = <30>;
     };
 
+    mouce: mouce {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MOUCE";
+        bindings = <&mouce_click>, <&mo>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+    };
+
+    mouce_click: mouce_click {
+        compatible = "zmk,behavior-tap-dance";
+        label = "MOUCE_CLICK";
+        #binding-cells = <0>;
+        bindings = <&mkp LCLK>, <&mkp RCLK>, <&mkp MCLK>;
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -69,7 +85,7 @@
 &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &mkp LCLK       &msc SCRL_UP    &mkp RCLK        &kp LS(LC(TAB))    &mmv MOVE_DOWN   &trans  &trans    &kp UP    &trans     &kp PG_UP      &kp HOME
 &rgb_ug RGB_EFF  &rgb_ug RGB_ON   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp LC(TAB)        &mmv MOVE_LEFT   &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN  &kp END
 &rgb_ug RGB_SPI  &rgb_ug RGB_OFF  &trans          &mkp MCLK       &trans           &kp LC(W)          &mmv MOVE_RIGHT  &trans  &trans    &trans    &trans     &trans         &trans
-&trans           &trans           &trans          &trans          &trans           &trans             &mkp LCLK        &trans  &trans    &trans    &trans     &trans
+&trans           &trans           &trans          &trans          &trans           &trans             &mouce RCLK 3    &trans  &trans    &trans    &trans     &trans
             >;
 
             display-name = "Left";
@@ -82,11 +98,23 @@
 &trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &kp UNDERSCORE  &kp PERCENT      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN    &kp CARET
 &trans  &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &kp KP_MINUS    &kp KP_PLUS      &kp LBKT              &kp RIGHT_BRACKET      &kp EQUAL      &kp EXCLAMATION
 &trans  &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &kp KP_DIVIDE   &kp KP_MULTIPLY  &kp LESS_THAN         &kp GREATER_THAN       &kp AMPERSAND  &kp PIPE
-&trans  &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans          &trans           &trans                &trans                 &trans
+&trans  &trans        &trans          &trans        &trans        &trans          &mouce_click     &trans          &trans           &trans                &trans                 &trans
             >;
 
             display-name = "Right";
             sensor-bindings = <&inc_dec_kp LC(LS(Z)) LC(Z)>;
+        };
+
+        Speed {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_Y(-200)  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_Y(200)   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_X(-200)  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_X(200)   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans             &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "200";
         };
     };
 };
