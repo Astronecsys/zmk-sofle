@@ -65,11 +65,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE  &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans     &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans     &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans     &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&trans     &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&kp F1           &kp F2           &kp F3          &kp F4          &kp F5           &kp F6             &mmv MOVE_UP     &kp F7  &kp F8    &kp F9    &kp F10    &kp F11        &kp F12
+&rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &mkp LCLK       &msc SCRL_UP    &mkp RCLK        &kp LS(LC(TAB))    &mmv MOVE_DOWN   &trans  &trans    &kp UP    &trans     &kp PG_UP      &kp HOME
+&rgb_ug RGB_EFF  &rgb_ug RGB_ON   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp LC(TAB)        &mmv MOVE_LEFT   &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN  &kp END
+&rgb_ug RGB_SPI  &rgb_ug RGB_OFF  &trans          &mkp MCLK       &trans           &kp LC(W)          &mmv MOVE_RIGHT  &trans  &trans    &trans    &trans     &trans         &trans
+&trans           &trans           &trans          &trans          &trans           &trans             &mkp LCLK        &trans  &trans    &trans    &trans     &trans
             >;
 
             display-name = "Left";
@@ -78,15 +78,15 @@
 
         layer_2 {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp TILDE       &kp GRAVE        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH       &kp DOLLAR
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &kp UNDERSCORE  &kp PERCENT      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN    &kp CARET
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &kp KP_MINUS    &kp KP_PLUS      &kp LBKT              &kp RIGHT_BRACKET      &kp EQUAL      &kp EXCLAMATION
-&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &kp KP_DIVIDE   &kp KP_MULTIPLY  &kp LESS_THAN         &kp GREATER_THAN       &kp AMPERSAND  &kp PIPE
-&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans          &trans           &trans                &trans                 &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp TILDE       &kp GRAVE        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH       &kp DOLLAR
+&trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &kp UNDERSCORE  &kp PERCENT      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN    &kp CARET
+&trans  &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &kp KP_MINUS    &kp KP_PLUS      &kp LBKT              &kp RIGHT_BRACKET      &kp EQUAL      &kp EXCLAMATION
+&trans  &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &kp KP_DIVIDE   &kp KP_MULTIPLY  &kp LESS_THAN         &kp GREATER_THAN       &kp AMPERSAND  &kp PIPE
+&trans  &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans          &trans           &trans                &trans                 &trans
             >;
 
             display-name = "Right";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp LC(LS(Z)) LC(Z)>;
         };
     };
 };
