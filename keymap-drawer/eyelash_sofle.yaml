@@ -59,9 +59,9 @@ layers:
   - Left
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:keyboard-space$$
-  - Right
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - Right
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:backspace-reverse-outline$$
   Left:
