@@ -57,7 +57,7 @@
 &kp TAB     &kp Q     &kp W     &kp E      &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U   &kp I      &kp O          &kp P       &kp BSLH
 &kp ESCAPE  &kp A     &kp S     &kp D      &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J   &kp K      &kp L          &kp SEMI    &kp APOS
 &kp LSHIFT  &kp Z     &kp X     &kp C      &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M   &kp COMMA  &kp DOT        &kp FSLH    &kp RSHIFT
-&kp INSERT  &kp LGUI  &kp LALT  &kp LCTRL  &mo 1   &kp SPACE    &kp ENTER        &kp ENTER  &mo 2   &mo 1      &kp BACKSPACE  &kp DELETE
+&kp INSERT  &kp LGUI  &kp LALT  &kp LCTRL  &mo 1   &kp SPACE    &kp ENTER        &kp ENTER  &mo 2   &mo 3      &kp BACKSPACE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp DELETE BACKSPACE>;
@@ -78,15 +78,27 @@
 
         layer_2 {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp TILDE       &kp GRAVE        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH       &kp DOLLAR
-&trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &kp UNDERSCORE  &kp PERCENT      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN    &kp CARET
-&trans  &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &kp KP_MINUS    &kp KP_PLUS      &kp LBKT              &kp RIGHT_BRACKET      &kp EQUAL      &kp EXCLAMATION
-&trans  &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &kp KP_DIVIDE   &kp KP_MULTIPLY  &kp LESS_THAN         &kp GREATER_THAN       &kp AMPERSAND  &kp PIPE
-&trans  &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans          &trans           &trans                &trans                 &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp TILDE       &kp GRAVE     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH         &kp DOLLAR
+&trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &kp UNDERSCORE  &kp PERCENT   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN      &kp CARET
+&trans  &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &kp MINUS       &kp PLUS      &kp LBKT              &kp RIGHT_BRACKET      &kp EXCLAMATION  &kp EQUAL
+&trans  &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &kp SLASH       &kp ASTERISK  &kp LESS_THAN         &kp GREATER_THAN       &kp AMPERSAND    &kp PIPE
+&trans  &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans          &trans        &trans                &trans                 &trans
             >;
 
             display-name = "Right";
             sensor-bindings = <&inc_dec_kp LC(LS(Z)) LC(Z)>;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DELETE    &kp BACKSPACE
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans        &kp NUMBER_7          &kp NUMBER_8           &kp NUMBER_9  &kp SPACE
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp MINUS  &kp PLUS      &kp NUMBER_4          &kp N5                 &kp NUMBER_6  &kp EQUAL
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp SLASH  &kp ASTERISK  &kp NUMBER_1          &kp NUMBER_2           &kp NUMBER_3  &kp ENTER
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans        &trans                &kp NUMBER_0           &kp DOT
+            >;
+
+            label = "Num";
         };
     };
 };
