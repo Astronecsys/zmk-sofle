@@ -50,11 +50,11 @@
         layer0 {
             display-name = "Default";
             bindings = <
-&kp GRAVE   &kp N1    &kp N2    &kp N3     &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7  &kp N8     &kp N9         &kp N0             &kp BACKSPACE
-&kp TAB     &kp Q     &kp W     &kp E      &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U   &kp I      &kp O          &kp P              &kp SINGLE_QUOTE
-&kp ESCAPE  &kp A     &kp S     &kp D      &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J   &kp K      &kp L          &kp SEMI           &kp DOUBLE_QUOTES
-&kp LSHIFT  &kp Z     &kp X     &kp C      &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M   &kp COMMA  &kp DOT        &kp QUESTION       &kp COLON
-&kp INSERT  &kp LGUI  &kp LALT  &kp LCTRL  &mo 1   &kp SPACE    &kp ENTER        &kp ENTER  &mo 2   &mo 1      &kp BACKSPACE  &kp RIGHT_CONTROL
+&kp GRAVE   &kp N1    &kp N2    &kp N3     &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7  &kp N8     &kp N9         &kp N0           &kp BACKSPACE
+&kp TAB     &kp Q     &kp W     &kp E      &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U   &kp I      &kp O          &kp P            &kp BACKSLASH
+&kp ESCAPE  &kp A     &kp S     &kp D      &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J   &kp K      &kp L          &kp SEMI         &kp DOUBLE_QUOTES
+&kp LSHIFT  &kp Z     &kp X     &kp C      &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M   &kp COMMA  &kp DOT        &kp QUESTION     &kp SINGLE_QUOTE
+&kp INSERT  &kp LGUI  &kp LALT  &kp LCTRL  &mo 1   &kp SPACE    &kp ENTER        &kp ENTER  &mo 2   &mo 1      &kp BACKSPACE  &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp DELETE BACKSPACE>;
@@ -75,10 +75,10 @@
 
         layer_2 {
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp TILDE       &kp AT_SIGN   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH       &kp BACKSLASH
-&bt BT_CLR_ALL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &mmv MOVE_DOWN   &kp UNDERSCORE  &kp PERCENT   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp CARET      &kp DOLLAR
-&out OUT_USB    &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0          &mmv MOVE_LEFT   &kp MINUS       &kp PLUS      &kp LBKT              &kp RIGHT_BRACKET      &kp EQUAL      &kp EXCLAMATION
-&out OUT_BLE    &sys_reset    &trans        &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &kp SLASH       &kp ASTERISK  &kp LESS_THAN         &kp GREATER_THAN       &kp AMPERSAND  &kp PIPE
+&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp PERCENT     &kp AT_SIGN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LCTRL        &kp TILDE
+&bt BT_CLR_ALL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &mmv MOVE_DOWN   &kp MINUS       &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp POUND        &kp DOLLAR
+&out OUT_USB    &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0          &mmv MOVE_LEFT   &kp UNDERSCORE  &kp EQUAL     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON        &kp AMPERSAND
+&out OUT_BLE    &sys_reset    &trans        &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &kp SLASH       &kp ASTERISK  &kp LESS_THAN         &kp GREATER_THAN       &kp EXCLAMATION  &kp PIPE
 &trans          &trans        &trans        &trans        &trans        &trans          &mkp LCLK        &trans          &trans        &trans                &trans                 &trans
             >;
 
